@@ -1,6 +1,7 @@
 # Instalation
 
 - git clone https://github.com/YGugnin/stackoverflow-test.git
+- cd stackoverflow-test
 - npm install
 - ng serve --open ( OR ng serve --host 0.0.0.0 for virtual OS)
 
