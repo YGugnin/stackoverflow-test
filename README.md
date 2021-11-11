@@ -5,4 +5,4 @@
 - ng serve --open ( OR ng serve --host 0.0.0.0 for virtual OS)
 
 ## note
-stackoverflow blocks IP from 300 requests. If it happens, just go to stackoverflow api doc, get your key from ajax request to server (make test reququest using form (https://api.stackexchange.com/docs/questions))
+stackoverflow blocks IP after 300 requests. If it happens, just go to stackoverflow api doc, get your key from ajax request to server (make test reququest using form (https://api.stackexchange.com/docs/questions)) and change variable apiKey in src/app/config/app-settings.config.ts
