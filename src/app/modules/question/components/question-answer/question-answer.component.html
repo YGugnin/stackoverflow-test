@@ -1,0 +1,8 @@
+<div class="answer-parent">
+  <div class="votes">{{answer.score}}</div>
+  <div class="content">
+    <a href="{{answer.owner.link}}"><img *ngIf="answer.owner.profile_image" src="{{answer.owner.profile_image}}" alt=""> <span>{{answer.owner.display_name}}</span></a> at {{answer.creation_date * 1000 | date : 'medium'}}
+    <div class="content-body" [innerHTML]="answer.body"></div>
+  </div>
+</div>
+

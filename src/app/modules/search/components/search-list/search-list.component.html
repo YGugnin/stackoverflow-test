@@ -1,0 +1,10 @@
+<div class="message" *ngIf="list.length < 1 && !init && !loading && !error">Empty set.</div>
+<div class="message" *ngIf="init && !loading && !error && !list.length">Please enter your request.</div>
+<div class="message" *ngIf="error">Error loading data...</div>
+<div class="list" *ngIf="list.length && !error">
+  <div *ngFor="let question of list">
+    <search-question [question]="question"></search-question>
+  </div>
+  <div class="show-more" *ngIf="showMore && !loading && !error"><input type="button" value="Show more" (click)="loadMore()"></div>
+</div>
+<div class="message" *ngIf="loading">Loading...</div>

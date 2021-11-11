@@ -1,0 +1,5 @@
+<div class="title"><a [attr.href]="['/question/' + question.question_id]" [innerHtml]="question.title"></a></div>
+<div class="info">
+  <div class="author">By <span [innerHtml]="question.owner.display_name"></span></div>
+  <div class="answers">Answers: <span>{{question.answer_count | number : '1.0-0' }}</span></div>
+</div>

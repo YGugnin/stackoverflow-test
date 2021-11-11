@@ -1,0 +1,48 @@
+@import "../../../../../assets/less/variables";
+
+.answer-parent {
+  display: flex;
+}
+.content-body {
+  background-color: @antiquewhite;
+  padding:          5px;
+  margin:           5px;
+  border:           dotted 1px @black;
+  pre {
+    margin-left:      10px;
+    background-color: @gray1;
+    padding:          10px;
+    overflow:         auto;
+  }
+}
+.answer {
+  display:        flex;
+  flex-direction: row;
+  padding:        5px 0;
+}
+.votes {
+  font-size:   @font-big;
+  padding:     0 10px;
+  font-weight: bold;
+  color:       @dark-red;
+}
+img {
+  height:         32px;
+  width:          32px;
+  vertical-align: middle;
+}
+span {
+  height: 100%;
+}
+ul{
+  list-style: none;
+  li {
+    &:before {
+      content:      "•";
+      color:       @black;
+      display:     inline-block;
+      width:       1em;
+      margin-left: 0
+    }
+  }
+}

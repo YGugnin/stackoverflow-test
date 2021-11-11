@@ -1,0 +1,6 @@
+<section class="search">
+  <form [formGroup]="searchForm" (ngSubmit)="formSubmit()">
+    <input placeholder="Search..." type="text" formControlName="searchText" value="ccc" />
+    <input type="submit" value="&#8981;" [disabled]="searchForm.invalid">
+  </form>
+</section>

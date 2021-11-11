@@ -1,0 +1,33 @@
+@import "../../../../../assets/less/variables";
+
+:host{
+  position: fixed;
+  width:    100%;
+}
+.search {
+  background-color: @green;
+  color:            @white;
+  display:          block;
+  padding:          5px 10px;
+  margin-top:       40px;
+  input {
+    margin:           0;
+    padding:          10px;
+    border:           none;
+    background-color: @white;
+    &[type="text"] {
+      width:                     calc(100% - 80px);
+      border-bottom-left-radius: 12px;
+      border-top-left-radius:    12px;
+    }
+    &[type="submit"] {
+      width:                      60px;
+      font-size:                  20px;
+      font-weight:                bold;
+      padding:                    4px 0 7px 2px;
+      cursor:                     pointer;
+      border-bottom-right-radius: 12px;
+      border-top-right-radius:    12px;
+    }
+  }
+}

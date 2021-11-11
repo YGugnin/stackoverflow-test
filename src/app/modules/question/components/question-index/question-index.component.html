@@ -1,0 +1,27 @@
+<div *ngIf="question" class="question-main">
+  <a [attr.href]="['/']">&lt;&lt; Back to serach</a>
+  <div class="title">{{question.title}}</div>
+  <div class="info">
+    <div>
+      By <a target="_blank" href="{{question.owner.link}}">{{question.owner.display_name}}</a> at {{question.creation_date * 1000 | date : 'medium'}}
+    </div>
+    <div class="tags">
+      Tags: <a  target="_blank" *ngFor="let tag of question.tags" href="https://stackoverflow.com/questions/tagged/{{tag}}">{{tag}}</a>
+    </div>
+    <div>
+      <a target="_blank" href="{{question.link}}">Source</a>
+    </div>
+  </div>
+  <div class="content-body" [innerHTML]="question.body">
+  </div>
+  <div *ngIf="answers" class="answers">
+    <div class="head">
+      Answers: {{answers?.length}}
+    </div>
+    <div class="answer" *ngFor="let answer of answers">
+      <question-answer [answer]="answer"></question-answer>
+    </div>
+  </div>
+</div>
+<div class="message" *ngIf="loadingQuestion">Loading...</div>
+<div class="message" *ngIf="loadingAnswers">Loading...</div>
